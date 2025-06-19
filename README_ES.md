@@ -4,7 +4,7 @@
 
 ## 1. Descripción General
 
-Este proyecto implementa un Microservicio de Órdenes usando **NestJS**, nombrado `purchases-orders-microservice` según `package.json`. Está arquitecturado usando principios de **Arquitectura Limpia (Arquitectura Hexagonal)** y el patrón **Command Query Responsibility Segregation (CQRS)**. Su responsabilidad principal es gestionar el ciclo de vida de las órdenes de clientes dentro de un sistema más amplio de e-commerce o compras.
+Este proyecto implementa un Microservicio de Órdenes usando **NestJS**. Está diseñado usando principios de **Arquitectura Limpia (Arquitectura Hexagonal)** y el patrón **Command Query Responsibility Segregation (CQRS)**. Su responsabilidad principal es gestionar el ciclo de vida de las órdenes de clientes dentro de un sistema más amplio de e-commerce o compras.
 
 Las funcionalidades clave incluyen:
 
