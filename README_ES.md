@@ -1,4 +1,4 @@
-# Microservicio de Órdenes de Compra (`purchases-orders-microservice`)
+# Microservicio de Órdenes de Compra (`orders-microservice`)
 
 > **🌍 English Documentation:** If you prefer to read this documentation in English, see [readme.md](./readme.md)
 
