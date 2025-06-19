@@ -1,5 +1,7 @@
 # Purchases Orders Microservice (`purchases-orders-microservice`)
 
+> **🌍 Documentación en Español:** Si prefieres leer esta documentación en español, consulta [README_ES.md](./README_ES.md)
+
 ## 1. Overview
 
 This project implements an Orders Microservice using **NestJS**, named `purchases-orders-microservice` as per `package.json`. It is architected using **Clean Architecture (Hexagonal Architecture)** principles and the **Command Query Responsibility Segregation (CQRS)** pattern. Its core responsibility is to manage the lifecycle of customer orders within a larger e-commerce or purchasing system.
@@ -12,7 +14,7 @@ Key functionalities include:
 * Handling payment success events to mark orders as paid.
 * Interacting with Product and Payment microservices via NATS for validation and processing.
 
-The microservice communicates via **NATS** messaging, utilizes **Prisma** with SQLite for data persistence, and relies on external services for product information and payment processing. The architecture prioritizes **maintainability, testability, scalability, and clear separation of concerns**.
+The microservice communicates via **NATS** messaging, utilizes **Prisma** with PostgreSQL for data persistence, and relies on external services for product information and payment processing. The architecture prioritizes **maintainability, testability, scalability, and clear separation of concerns**.
 
 ---
 
@@ -98,7 +100,7 @@ src/
 * NPM or Yarn
 * NATS Server instance running.
 * Access to dependent services (Product MS, Payment MS) via NATS.
-* A database compatible with the Prisma schema (default: SQLite).
+* PostgreSQL database server running and accessible.
 
 ### 5.2. Installation
 
@@ -120,7 +122,7 @@ PORT=3002 # Optional port, not directly used by NATS listener
 NATS_SERVERS=nats://localhost:4222 # Comma-separated list
 
 # Database Connection URL (for Prisma)
-DATABASE_URL="file:./dev.db"
+DATABASE_URL="postgresql://orders_user:orders_password@orders-db:5432/orders_db?schema=public"
 ```
 
 ### 5.4. Database Migrations (Prisma)
